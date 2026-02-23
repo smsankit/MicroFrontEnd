@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
-import "./styles.css";
 import FunFact from './FunFact'
+import "./InsuranceDetails.scss"
 
 const InsuranceDetails = ({ insuranceDetails }) => {
   const details = insuranceDetails || {
@@ -56,15 +56,13 @@ const InsuranceDetails = ({ insuranceDetails }) => {
 
   return (
     <Fragment>
-      <div className="insurance-container">
+      <div className="insurance-container themed-insurance">
         <div className="fun-fact-container">
-          <div className="card shadow-lg">
-            <div className="card-header bg-dark text-white">
-              <h3>Fun Fact</h3>
-            </div>
+         
+           
             <div className="card-body">
               <FunFact></FunFact>
-            </div>
+            
           </div>
         </div>
 

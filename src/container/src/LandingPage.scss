@@ -1,6 +1,25 @@
-/* ===== Page background ===== */
-.container-fluid.vh-100 {
+/* ===== GLOBAL PAGE BACKGROUND (FIX FOR SCROLL) ===== */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed; /* ensures gradient covers scrolling */
+}
+
+/* make bootstrap wrappers transparent */
+.container-fluid,
+.row {
+  background: transparent !important;
+}
+
+/* ===== Container height handling ===== */
+.container-fluid.vh-100 {
+  min-height: 100vh;
+  background: transparent;
 }
 
 /* ===== Glass Sidebar ===== */
@@ -41,8 +60,19 @@
   gap: 8px;
 }
 
+/* icons */
+// .container-fluid .btn-primary::before { content: "👤"; }
+// .container-fluid .btn-info::before { content: "✉️"; }
+// .container-fluid .btn-danger::before { content: "🚪"; }
 
-/* ===== FORCE Welcome Header Glass Theme ===== */
+/* hover animation */
+.container-fluid .bg-dark .btn:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateX(6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+}
+
+/* ===== Welcome Header Glass ===== */
 .container-fluid .welcome-header {
   background: rgba(255,255,255,0.15) !important;
   backdrop-filter: blur(14px) !important;
@@ -67,23 +97,10 @@
   border: 1px solid rgba(255,255,255,0.35) !important;
 }
 
-/* icons without JSX change */
-.container-fluid .btn-primary::before { content: "👤"; }
-.container-fluid .btn-info::before { content: "✉️"; }
-.container-fluid .btn-danger::before { content: "🚪"; }
-
-/* hover animation */
-.container-fluid .bg-dark .btn:hover {
-  background: rgba(255,255,255,0.22);
-  transform: translateX(6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
-}
-
 /* ===== Content area ===== */
 .container-fluid .col-md-9.p-4 {
   background: transparent;
 }
-
 
 /* ===== Animation ===== */
 @keyframes fadeInUp {
@@ -115,6 +132,5 @@
 
   .container-fluid .col-md-9 h1 {
     font-size: 24px;
-    color: #1e293b;   /* dark slate */
   }
 }

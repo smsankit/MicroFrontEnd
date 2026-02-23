@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { createWorker } from "./CreateWorker";
+import "./UserDetails.scss";
 
 const UserDetails = () => {
   const [worker, setWorker] = useState(null);
@@ -82,63 +83,77 @@ const UserDetails = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row">
-       
-        <div className="col-md-6">
-          <div className="card shadow-lg mb-4">
-            <div className="card-header bg-success text-white">
-              <h3>User Details</h3>
-            </div>
-            <div className="card-body">
-              <p><strong>Name:</strong> {loggedInUser.name}</p>
-              <p><strong>Age:</strong> {loggedInUser.age}</p>
-              <p><strong>Email:</strong> {loggedInUser.email}</p>
-              <p><strong>Aadhaar Number:</strong> {loggedInUser.aadhaarNumber}</p>
-              <p><strong>Address:</strong> {loggedInUser.address}</p>
-            </div>
-          </div>
+  <div className="container-fluid themed-container">
+  <div className="row">
+
+    {/* USER DETAILS */}
+    <div className="col-lg-6 col-md-6 col-12">
+      <div className="card glass-card mb-4 h-100">
+
+        <div className="card-header glass-header success">
+          <h3>User Details</h3>
         </div>
 
-       
-        <div className="col-md-6">
-          <div className="card shadow-lg mb-4">
-            <div className="card-header bg-info text-white">
-              <h3>Offers</h3>
-            </div>
-            <div className="card-body">
-              
-              {loading && <p>Finding the best offers for you...</p>}
-
-              
-              {sumAssured !== null && (
-                <div className="text-success">
-                  <p style={{ fontSize: "20px" }}><strong>Congratulations!</strong> 🎉</p><br />
-                  Dear <strong>{loggedInUser.name}</strong>, you are eligible for a <strong>Term Insurance of <span className="font-weight-bold">₹{sumAssured}</span></strong>.<br></br>
-                  We are excited to offer you this protection, ensuring peace of mind for you and your loved ones.<br />
-                  <button 
-                    className="btn btn-primary mt-3"
-                    onClick={() => {
-                      
-                      alert("Redirecting to the application page...");
-                    }}
-                  >
-                    Apply Now
-                  </button>
-                </div>
-              )}
-            </div>
-          </div>
+        <div className="card-body">
+          <p><strong>Name:</strong> {loggedInUser.name}</p>
+          <p><strong>Age:</strong> {loggedInUser.age}</p>
+          <p><strong>Email:</strong> {loggedInUser.email}</p>
+          <p><strong>Aadhaar Number:</strong> {loggedInUser.aadhaarNumber}</p>
+          <p><strong>Address:</strong> {loggedInUser.address}</p>
         </div>
+
       </div>
-
-      
-      {receivedMessage && (
-        <div className="alert alert-info mt-4">
-          <strong>Message Received:</strong> {receivedMessage}
-        </div>
-      )}
     </div>
+
+
+    {/* OFFERS */}
+    <div className="col-lg-6 col-md-6 col-12">
+      <div className="card glass-card mb-4 h-100">
+
+        <div className="card-header glass-header info">
+          <h3>Offers</h3>
+        </div>
+
+        <div className="card-body">
+
+          {loading && <p>Finding the best offers for you...</p>}
+
+          {sumAssured !== null && (
+            <div className="offer-success">
+              <p className="offer-title"><strong>Congratulations!</strong> 🎉</p>
+
+              Dear <strong>{loggedInUser.name}</strong>, you are eligible for a  
+              <strong> Term Insurance of ₹{sumAssured}</strong>.
+
+              <p className="mt-2">
+                We are excited to offer you this protection,
+                ensuring peace of mind for you and your loved ones.
+              </p>
+
+              <button
+                className="btn btn-primary"
+                onClick={() => alert("Redirecting to the application page...")}
+              >
+                Apply Now
+              </button>
+            </div>
+          )}
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  {receivedMessage && (
+    <div className="alert glass-alert mt-3">
+      <strong>Message Received:</strong> {receivedMessage}
+    </div>
+  )}
+
+</div>
   );
 };
 
