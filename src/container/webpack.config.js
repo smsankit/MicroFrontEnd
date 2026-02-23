@@ -66,8 +66,8 @@ module.exports = {
       remotes: {
         // userdetails: 'userdetails@https://nagp-users.netlify.app/remoteentry.js',
         // insurancedetails: 'insurancedetails@https://nagp-insurance.netlify.app/remoteEntry.js',
-        userdetails: "userdetails@http://localhost:8081/remoteEntry.js",
-        insurancedetails: "insurancedetails@http://localhost:8080/remoteEntry.js",
+        userdetails: "userdetails@http://localhost:8080/remoteEntry.js",
+        insurancedetails: "insurancedetails@http://localhost:8081/remoteEntry.js",
       },
       shared: { 'react': { singleton: true }, "react-dom": { singleton: true } },
     }),

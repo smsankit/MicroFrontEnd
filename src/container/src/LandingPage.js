@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 import { checkAuthentication, logout } from "./Auth";  
+import "./LandingPage.scss";
+
 
 const UserDetails = React.lazy(() => import("userdetails/UserDetails"));
 const InsuranceDetails = React.lazy(() =>
@@ -68,53 +70,98 @@ const LandingPage = ({ setIsAuthenticated }) => {
   };
 
   return (
-    <div className="container-fluid vh-100">
-      <div className="row h-100">
-        <div className="col-md-3 bg-dark text-white p-4 d-flex flex-column h-100">
-          <h4 className="text-center mb-4">Menu</h4>
-          <div className="d-flex flex-column flex-grow-1">
-            <button
-              className="btn btn-primary mb-3"
-              onClick={handleShowUserDetails}
-            >
-              View Profile Details
-            </button>
-            <button
-              className="btn btn-primary mb-3"
-              onClick={handleShowInsuranceDetails}
-            >
-              View Insurance Details
-            </button>
+  <div className="container-fluid vh-100">
+    <div className="row h-100">
 
-            <button
-              className="btn btn-info mb-3"
-              onClick={handleSendMessage}
-            >
-              Send Message
-            </button>
+      {/* Sidebar */}
+      <aside className="col-md-3 bg-dark text-white d-flex flex-column">
 
-            <button
-              className="btn btn-danger mt-3"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
+        {/* Header */}
+        <div className="p-4 text-center border-bottom">
+          <h4 className="mb-1">🛡️ Insurance Portal</h4>
+          <small className="text-light opacity-75">Customer Dashboard</small>
+        </div>
+
+        {/* Menu */}
+        <div className="p-4 d-flex flex-column flex-grow-1">
+
+          <button
+            className="btn btn-primary mb-3"
+            onClick={handleShowUserDetails}
+          >
+            View Profile Details
+          </button>
+
+          <button
+            className="btn btn-primary mb-3"
+            onClick={handleShowInsuranceDetails}
+          >
+            View Insurance Details
+          </button>
+
+          <button
+            className="btn btn-info mb-3"
+            onClick={handleSendMessage}
+          >
+            Send Message
+          </button>
+
+          {/* Spacer pushes logout to bottom */}
+          <div className="flex-grow-1"></div>
+
+          <button
+            className="btn btn-danger"
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
+
+        </div>
+
+      </aside>
+
+      {/* Main content */}
+      <main className="col-md-9 p-4 d-flex flex-column">
+
+        {/* Welcome header */}
+        <div className="welcome-header d-flex align-items-center justify-content-between mb-4">
+          <h1 className="mb-0">
+            Welcome{user && `, ${user.name}`}
+          </h1>
+
+          {/* optional avatar visual only */}
+          <div
+            style={{
+              width: 48,
+              height: 48,
+              borderRadius: "50%",
+              background: "#e2e8f0",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: 20
+            }}
+          >
+            👤
           </div>
         </div>
 
-    
-        <div className="col-md-9 p-4">
-          <h1>Welcome{user && `, ${user.name}`}</h1>
-          <br />
+        {/* Content area */}
+        <div className="flex-grow-1">
+
           <Suspense fallback={<div>Loading...</div>}>
             {showUserDetails && user && <UserDetails user={user} />}
             {!showUserDetails && insuranceDetails && (
               <InsuranceDetails insuranceDetails={insuranceDetails} />
             )}
           </Suspense>
+
         </div>
-      </div>
+
+      </main>
+
     </div>
+  </div>
   );
 };
 
