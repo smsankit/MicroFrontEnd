@@ -91,7 +91,7 @@ const UserDetails = () => {
       <div className="card glass-card mb-4 h-100">
 
         <div className="card-header glass-header success">
-          <h3>User Details</h3>
+          <h3>Customer Information</h3>
         </div>
 
         <div className="card-body">
@@ -111,7 +111,7 @@ const UserDetails = () => {
       <div className="card glass-card mb-4 h-100">
 
         <div className="card-header glass-header info">
-          <h3>Offers</h3>
+          <h3>Available Benefits</h3>
         </div>
 
         <div className="card-body">
@@ -123,18 +123,17 @@ const UserDetails = () => {
               <p className="offer-title"><strong>Congratulations!</strong> 🎉</p>
 
               Dear <strong>{loggedInUser.name}</strong>, you are eligible for a  
-              <strong> Term Insurance of ₹{sumAssured}</strong>.
+              <strong> Term Insurance of ₹{sumAssured}</strong> and can avail a 10% discount on your first premium. Activate your coverage now to ensure financial protection for you and your family.
 
               <p className="mt-2">
-                We are excited to offer you this protection,
-                ensuring peace of mind for you and your loved ones.
+                This coverage helps safeguard your future and provides financial security for your loved ones
               </p>
 
               <button
                 className="btn btn-primary"
                 onClick={() => alert("Redirecting to the application page...")}
               >
-                Apply Now
+                Proceed to Application
               </button>
             </div>
           )}

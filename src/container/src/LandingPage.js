@@ -89,21 +89,21 @@ const LandingPage = ({ setIsAuthenticated }) => {
             className="btn btn-primary mb-3"
             onClick={handleShowUserDetails}
           >
-            View Profile Details
+            Account Overview
           </button>
 
           <button
             className="btn btn-primary mb-3"
             onClick={handleShowInsuranceDetails}
           >
-            View Insurance Details
+            View Policy Details
           </button>
 
           <button
             className="btn btn-info mb-3"
             onClick={handleSendMessage}
           >
-            Send Message
+            Contact Support
           </button>
 
           {/* Spacer pushes logout to bottom */}
@@ -113,7 +113,7 @@ const LandingPage = ({ setIsAuthenticated }) => {
             className="btn btn-danger"
             onClick={handleLogout}
           >
-            Logout
+            Sign Out
           </button>
 
         </div>

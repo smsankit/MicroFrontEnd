@@ -57,12 +57,16 @@ const InsuranceDetails = ({ insuranceDetails }) => {
   return (
     <Fragment>
       <div className="insurance-container themed-insurance">
-        <div className="fun-fact-container">
-         
-           
+        <div className="fun-fact-container mb-4">
+          <div className="card shadow-lg">
+          <div className="card-header bg-dark text-white"> 
+            <h3>
+              Insurance Insight
+            </h3>
+           </div>
             <div className="card-body">
               <FunFact></FunFact>
-            
+            </div>
           </div>
         </div>
 
@@ -70,7 +74,7 @@ const InsuranceDetails = ({ insuranceDetails }) => {
           <div className="col-md-6">
             <div className="card shadow-lg mb-4 insurance-details-card">
               <div className="card-header bg-success text-white">
-                <h3>Insurance Details</h3>
+                <h3>Policy Details</h3>
               </div>
               <div className="card-body">
                 <p>
@@ -80,10 +84,10 @@ const InsuranceDetails = ({ insuranceDetails }) => {
                   <strong>Insurance Type:</strong> {details.insuranceType}
                 </p>
                 <p>
-                  <strong>Premium:</strong> ₹{details.premium}
+                  <strong>Premium Amount:</strong> ₹{details.premium}
                 </p>
                 <p>
-                  <strong>Coverage Amount:</strong> ₹{details.coverageAmount}
+                  <strong>Coverage Limit:</strong> ₹{details.coverageAmount}
                 </p>
                 <p>
                   <strong>Insurance Provider:</strong>{' '}
@@ -95,7 +99,7 @@ const InsuranceDetails = ({ insuranceDetails }) => {
                   className="btn btn-primary"
                   onClick={() => setIsCardVisible(true)}
                 >
-                  Pay the Premium
+                  Proceed to Payment
                 </button>
                 <span className="ms-3 text-success discount-text">
                   <strong>Get 10% Discount! </strong>
@@ -108,7 +112,7 @@ const InsuranceDetails = ({ insuranceDetails }) => {
             {isCardVisible && (
               <div className="card shadow-lg mb-4 payment-card">
                 <div className="card-header bg-warning text-black">
-                  <h3>Select Payment Option</h3>
+                  <h3>Choose Payment Method</h3>
                 </div>
                 <div className="card-body">
                   <div className="payment-options-grid">
@@ -165,13 +169,13 @@ const InsuranceDetails = ({ insuranceDetails }) => {
                     className="btn btn-primary"
                     onClick={handlePayPremiumClick}
                   >
-                    Pay ₹{details.premium}
+                    Confirm Payment ₹{details.premium}
                   </button>
                   <button
                     className="btn btn-secondary ms-3"
                     onClick={handleHideCard}
                   >
-                    Cancel
+                    Cancel Transaction
                   </button>
                 </div>
               </div>

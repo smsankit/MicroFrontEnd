@@ -1,70 +1,87 @@
 const users = [
   {
     id: 1,
-    name: 'Arjun Patel',
-    age: 35,
+    name: 'Ankit Chauhan',
+    age: 37,
     gender:'male',
-    income:1000000,
-    email: 'arjun.patel@example.com',
-    aadhaarNumber: '1234 5678 9012',
-    address: 'A-101, Pristine Residency, Mumbai, Maharashtra, 400001',
+    income:1250000,
+    email: 'ankit.chauhan@example.com',
+    aadhaarNumber: '5678 1234 9087',
+    address: 'Mahaveer Apartment, Gurgaon, Haryana, 122001',
     insurance: {
-      policyNumber: 'HP123456789',
+      policyNumber: 'HI908765432',
       insuranceType: 'Health Insurance',
-      premium: 12000,
-      coverageAmount: 500000,
-      insuranceProvider: 'Religare Health Insurance'
+      premium: 15000,
+      coverageAmount: 700000,
+      insuranceProvider: 'Star Health Insurance'
     }
   },
   {
     id: 2,
-    name: 'Priya Sharma',
-    email: 'priya.sharma@example.com',
-    age: 28,
+    name: 'Neha Gupta',
+    email: 'neha.gupta@example.com',
+    age: 30,
     gender:'female',
-    income:1800000,
-    aadhaarNumber: '2234 5678 9012',
-    address: 'B-202, Royal Heights, Delhi, 110001',
+    income:1950000,
+    aadhaarNumber: '7788 9900 1122',
+    address: 'D-45, Palm Residency, Noida, Uttar Pradesh, 201301',
     insurance: {
-      policyNumber: 'MP987654321',
+      policyNumber: 'MI556677889',
       insuranceType: 'Motor Insurance',
-      premium: 18000,
-      coverageAmount: 3000000,
-      insuranceProvider: 'ICICI Lombard'
+      premium: 21000,
+      coverageAmount: 3500000,
+      insuranceProvider: 'HDFC ERGO'
     }
   },
   {
     id: 3,
-    name: 'Vikram Singh',
-    email: 'vikram.singh@example.com',
-    age: 42,
+    name: 'Arjun Mehta',
+    email: 'arjun.mehta@example.com',
+    age: 45,
     gender:'male',
-    income:1100000,
-    aadhaarNumber: '3234 5678 9012',
-    address: 'C-303, Green Meadows, Bangalore, Karnataka, 560001',
+    income:1350000,
+    aadhaarNumber: '8899 0011 2233',
+    address: 'A-88, Silver Springs, Hyderabad, Telangana, 500001',
     insurance: {
-      policyNumber: 'LP112233445',
+      policyNumber: 'LI667788990',
       insuranceType: 'Life Insurance',
-      premium: 25000,
-      coverageAmount: 10000000,
-      insuranceProvider: 'SBI Life Insurance'
+      premium: 32000,
+      coverageAmount: 12000000,
+      insuranceProvider: 'LIC of India'
     }
   },
   {
     id: 4,
-    name: 'Pankaj Jangid',
-    email: 'pj@abc.com',
-    age: 31,
+    name: 'Sandeep Kulkarni',
+    email: 'sandeep.k@example.com',
+    age: 34,
     gender:'male',
-    income:1600000,
-    aadhaarNumber: '3234 5678 9012',
-    address: 'C-303, Green Meadows, Bangalore, Karnataka, 560001',
+    income:1750000,
+    aadhaarNumber: '4455 6677 8899',
+    address: 'H-21, Sunrise Colony, Ahmedabad, Gujarat, 380001',
     insurance: {
-      policyNumber: 'LP112233445',
+      policyNumber: 'LI334455667',
       insuranceType: 'Life Insurance',
-      premium: 25000,
-      coverageAmount: 10000000,
-      insuranceProvider: 'MAX Life Insurance'
+      premium: 27000,
+      coverageAmount: 9000000,
+      insuranceProvider: 'TATA AIA Life Insurance'
+    }
+  },
+   {
+    id: 5,
+    name: 'Ankit Kumar',
+    email: 'a@b.com',
+    age: 34,
+    gender:'male',
+    income:1750000,
+    aadhaarNumber: '4455 6677 8899',
+    address: 'H-21, Palam Vihar, Gurgaon, Haryana, 122001',
+    insurance: {
+      policyNumber: 'LI334455667',
+      insuranceType: 'Life Insurance',
+      premium: 27000,
+      coverageAmount: 9000000,
+      insuranceProvider: 'Bajaj Life Insuranc'
     }
   }
 ];
