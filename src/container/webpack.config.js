@@ -65,7 +65,7 @@ module.exports = {
       name: "shellapp",
       remotes: {
         userdetails: 'userdetails@https://nagpuserapp.netlify.app/remoteEntry.js',
-        insurancedetails: 'https://nagpinsuranceapp.netlify.app/remoteEntry.js',
+        insurancedetails: 'insurancedetails@https://nagpinsuranceapp.netlify.app/remoteEntry.js',
         // userdetails: "userdetails@http://localhost:8080/remoteEntry.js",
         // insurancedetails: "insurancedetails@http://localhost:8081/remoteEntry.js",
       },
