@@ -12,7 +12,7 @@ module.exports = {
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 
       'Access-Control-Allow-Headers': 'Content-Type, Authorization', 
     },
-    // port: 3002, 
+    port: 3002, 
     
   },
   output: {
