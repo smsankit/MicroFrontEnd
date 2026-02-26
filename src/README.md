@@ -94,8 +94,6 @@ npm start
 
 ##### Container app will now be running at http://localhost:3000. Same can be verified in browser.
 
-- All apps are now running. Use the container app running at http://localhost:8082 to validate the functionality.
+- All apps are now running. Use the container app running at http://localhost:3000 to validate the functionality.
 - Inside the insurance folder under src folder you’ll see a file named seeder.js. Open it and copy any of the email Id from the static user.
-- Ender the copied email id on the login screen and click login.
-
-## Please note, having node js and npm installed on your machine is a must to run React app.
+- Enter the copied email id in the email address field on the Signin page and click Sign in.
