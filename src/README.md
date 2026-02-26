@@ -72,7 +72,7 @@ npm install
 npm start
 ```
 
-##### Users’ app will now be running at http://localhost:8081. Same can be verified in browser.
+##### Users’ app will now be running at http://localhost:3001. Same can be verified in browser.
 
 ### Then run the Insurance App
 
@@ -82,7 +82,7 @@ npm install
 npm start
 ```
 
-##### Insurance app will now be running at http://localhost:8080. Same can be verified in browser.
+##### Insurance app will now be running at http://localhost:3002. Same can be verified in browser.
 
 ### And then run the Container App
 
@@ -92,7 +92,7 @@ npm install
 npm start
 ```
 
-##### Container app will now be running at http://localhost:8082. Same can be verified in browser.
+##### Container app will now be running at http://localhost:3000. Same can be verified in browser.
 
 - All apps are now running. Use the container app running at http://localhost:8082 to validate the functionality.
 - Inside the insurance folder under src folder you’ll see a file named seeder.js. Open it and copy any of the email Id from the static user.
